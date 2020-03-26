@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>EconomicTimes News</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/news.css" th:href="@{/css/news.css}" type="text/css"/>
+</head>
+
+<body>
+<div class="container">
+    <h1 class="heading">EconomicTimes</h1>
+    <i class="lastUpdated"><span th:text="${lastUpdated}"/></i><br>
+
+    <div class="table_class">
+    <table class="table">
+        <tr th:each="news : ${newsList}">
+            <div class="rows">
+            <a class="headline" th:href="${news.url}"><span bold="true" th:text="${news.headline}"/></a><br>
+            <i class="date" th:text="${news.date}"></i>
+            <p th:text="${news.content}"></p>
+            </div>
+        </tr>
+    </table>
+    </div>
+</div>
+</body>
+
+</html>

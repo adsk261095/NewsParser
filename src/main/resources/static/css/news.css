@@ -1,0 +1,24 @@
+.heading{
+    color: crimson;
+}
+.lastUpdated{
+    font-size: 90%;
+}
+.table_class {
+    margin-top: 5%;
+}
+.rows {
+    border-bottom-style: solid;
+    margin-top: 2%;
+    border-width: thin;
+}
+i.date {
+    font-size: 80%;
+}
+.headline {
+    color: black;
+    font-weight: bold;
+}
+.headline:hover {
+    color: blue;
+}
